@@ -17,12 +17,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main); // 关联layout文件夹中对应的xml文件
 
-        button=findViewById(R.id.button);
-        button.setOnClickListener(view->{
-            button.setText("changed!");
-        });
+//        button=findViewById(R.id.button);
+//        button.setOnClickListener(view->{
+//            button.setText("changed!");
+//        });
 
-        button2=findViewById((R.id.button2));
+        button2=findViewById((R.id.button));
         button2.setOnClickListener(view->{
             Intent intent =new Intent(this, TabPagerActivity.class);
 
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         if(MainApplication.getInstance().isLogin==false){
-            Toast.makeText(this, "还未登录", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "您尚未登录", Toast.LENGTH_SHORT).show();
         }
 
     }

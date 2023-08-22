@@ -23,7 +23,7 @@ public class TabPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if (position == 0 ) {
-            if( MainApplication.getInstance().isLogin)
+            if( MainApplication.getInstance().isLogin==false)
                 return new TabFirstFragment();  // 返回第一个碎片
             else
                 return new NoLoginFragment();
